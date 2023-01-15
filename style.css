@@ -16,7 +16,6 @@ body {
 
 body * {
     font-family: 'Roboto', sans-serif;
-    font-size: 1.2rem;
 }
 
 main {
@@ -25,7 +24,6 @@ main {
     grid-template-areas: 'A B''A C';
     place-content: center;
     gap: 3.2rem;
-
     height: 100vh;
 }
 
@@ -149,20 +147,4 @@ main {
     justify-content: space-between;
 
     margin-top: .96rem;
-}
-
-@media (max-width: 670px) {
-    main {
-        display: flex;
-        flex-direction: column;
-
-        max-width: 27rem;
-        margin: auto;
-        height: auto;
-        padding-block: 6rem;
-    }
-
-    .horizontal .controls {
-        padding-inline: 3rem;
-    }
 }

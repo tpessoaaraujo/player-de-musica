@@ -1,0 +1,15 @@
+@media only screen and (max-width: 670px) {
+    main {
+        display: flex;
+        flex-direction: column;
+
+        max-width: 27rem;
+        margin: auto;
+        height: auto;
+        padding-block: 6rem;
+    }
+
+    .horizontal .controls {
+        padding-inline: 3rem;
+    }
+}
