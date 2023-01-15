@@ -1,0 +1,168 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+html {
+    font-size: 10px;
+}
+
+body {
+    background-color: #0F0D13;
+}
+
+body * {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.2rem;
+}
+
+main {
+    display: grid;
+    grid-template-columns: max-content max-content;
+    grid-template-areas: 'A B''A C';
+    place-content: center;
+    gap: 3.2rem;
+
+    height: 100vh;
+}
+
+/* player-1 */
+#player-1 {
+    grid-area: A;
+    padding: 5rem 3.8rem;
+}
+
+#player-1 #cover-1 {
+    width: 19rem;
+    height: 19rem;
+    object-fit: cover;
+}
+
+#player-1 .wrapper {
+    width: 19rem;
+}
+
+#player-1 .info {
+    margin-top: 2.8rem;
+}
+
+/* player-2 */
+#player-2 {
+    grid-area: B;
+    padding: 2.8rem;
+    height: fit-content;
+}
+
+#player-2 #cover-2 {
+    width: 8.4rem;
+    height: 8.4rem;
+    object-fit: cover;
+}
+
+/* player-3 */
+#player-3 {
+    grid-area: C;
+    padding: 2.8rem;
+}
+
+#player-3 #cover-3 {
+    width: 8.4rem;
+    height: 8.4rem;
+    object-fit: cover;
+}
+
+.player {
+    background-color: #2A2141;
+    border-radius: 1rem;
+}
+
+.info { 
+    color: #E1E1E6;
+}
+
+.info-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 2.8rem;
+}
+
+.info h1 {
+    font-size: 2.4rem;
+    margin-bottom: .96rem;
+}
+
+.info p {
+    opacity: .67;
+    font-size: 1.9rem;
+}
+
+.controls {
+    display: flex;
+    justify-content: space-between;
+
+    margin-top: 2.8rem;
+}
+
+.horizontal .controls {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.track {
+    margin-top: 2.8rem;
+    position: relative;
+}
+
+.track::before {
+    display: block;
+    content: '';
+    height: .6rem;
+    width: 100%;
+
+    background-color: #D9D9D9;
+    opacity: .3;
+    border-radius: 1rem;
+
+    position: absolute;
+}
+
+.track::after {
+    display: block;
+    content: '';
+    height: .6rem;
+    width: 80%;
+
+    background-color: #D9D9D9;
+    border-radius: 1rem;
+}
+
+.time {
+    font-size: 1.4rem;
+    color: #C4C4CC;
+    opacity: .7;
+
+    display: flex;
+    justify-content: space-between;
+
+    margin-top: .96rem;
+}
+
+@media (max-width: 670px) {
+    main {
+        display: flex;
+        flex-direction: column;
+
+        max-width: 27rem;
+        margin: auto;
+        height: auto;
+        padding-block: 6rem;
+    }
+
+    .horizontal .controls {
+        padding-inline: 3rem;
+    }
+}
